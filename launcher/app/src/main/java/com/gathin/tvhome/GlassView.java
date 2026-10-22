@@ -10,7 +10,8 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * A translucent glass slab: soft sheen fill, bright top specular, crisp rim and a faint outer glow.
+ * A translucent glass slab: soft sheen fill, bright top specular, crisp rim, a faint outer glow and a
+ * two-tone focus ring that stays visible on white banners.
  * One instance floats over the grid and is moved with spring animations between tiles.
  */
 public class GlassView extends View {
@@ -19,6 +20,8 @@ public class GlassView extends View {
     private final Paint specular = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint rim = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint glow = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint gapPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+    private final Paint ringPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final RectF rect = new RectF();
     private final float density;
     private float radius;
@@ -35,6 +38,9 @@ public class GlassView extends View {
         rim.setStrokeWidth(1.5f * density);
         rim.setColor(0xCCFFFFFF);
         glow.setStyle(Paint.Style.STROKE);
+        gapPaint.setStyle(Paint.Style.STROKE);
+        gapPaint.setColor(0xB3000000);
+        ringPaint.setStyle(Paint.Style.STROKE);
         // Cache the slab as a texture. The spring only changes translation, so the GPU can
         // move it without replaying clipPath and the glow on every frame. That path is
         // software-rendered on the MT5895 and is what makes the highlight crawl.
@@ -98,5 +104,18 @@ public class GlassView extends View {
         canvas.restore();
 
         canvas.drawRoundRect(rect, radius, radius, rim);
+
+        // Focus ring outside the tile: a dark band, then a bright ring in the rim's colour. On a white
+        // banner (Netflix, YouTube) the rim and the sheen vanish into the tile, so the ring sits on the
+        // dock or the wallpaper instead; the dark band keeps it apart from the tile and readable on light
+        // wallpapers. Both stay inside the 6 dp inset, so the glass needs no resize.
+        float gap = 2.5f * density, ring = 2f * density;
+        float o = gap / 2f;
+        gapPaint.setStrokeWidth(gap);
+        canvas.drawRoundRect(rect.left - o, rect.top - o, rect.right + o, rect.bottom + o, radius + o, radius + o, gapPaint);
+        o = gap + ring / 2f;
+        ringPaint.setStrokeWidth(ring);
+        ringPaint.setColor(rim.getColor() | 0xFF000000);
+        canvas.drawRoundRect(rect.left - o, rect.top - o, rect.right + o, rect.bottom + o, radius + o, radius + o, ringPaint);
     }
 }

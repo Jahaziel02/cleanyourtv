@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:textColor="@drawable/pill_text_dim"
         android:duplicateParentState="true"
-        android:textSize="11sp"
+        android:textSize="14sp"
         android:textDirection="locale"
         android:fontFamily="@font/outfit"
         android:letterSpacing="0.04" />
