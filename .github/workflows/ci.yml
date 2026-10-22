@@ -50,3 +50,12 @@ jobs:
           size=$(stat -c %s launcher/app/build/outputs/apk/release/app-release.apk)
           echo "release APK: $((size / 1024)) KB"
           test "$size" -lt 471040 || { echo "APK is over 460 KB; the launcher targets 1 GB TVs, keep it small"; exit 1; }
+      # Downloadable from the run's page (Actions tab), for installing from a phone without a build setup.
+      # Signed with this runner's throwaway debug key, so an APK from a later run installs over it only
+      # after the old one is uninstalled.
+      - name: Upload the release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: cleanyourtv-launcher
+          path: launcher/app/build/outputs/apk/release/app-release.apk
+          if-no-files-found: error
