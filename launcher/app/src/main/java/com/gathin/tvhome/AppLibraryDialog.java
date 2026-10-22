@@ -462,7 +462,7 @@ final class AppLibraryDialog {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
         try { activity.startActivity(intent); }
         catch (ActivityNotFoundException | SecurityException e) {
-            Toast.makeText(activity, activity.getString(R.string.cant_open, label(app)), Toast.LENGTH_SHORT).show();
+            Toast.makeText(activity, activity.getString(R.string.cant_open, label(app)), Toast.LENGTH_LONG).show();
         }
     }
 
@@ -492,7 +492,7 @@ final class AppLibraryDialog {
             try {
                 activity.startActivity(new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:" + pkg)));
             } catch (ActivityNotFoundException | SecurityException e) {
-                Toast.makeText(activity, activity.getString(R.string.cant_open, label(app)), Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, activity.getString(R.string.cant_open, label(app)), Toast.LENGTH_LONG).show();
             }
         });
         int menuWidth = dp(220);

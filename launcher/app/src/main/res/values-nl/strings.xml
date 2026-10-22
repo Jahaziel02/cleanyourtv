@@ -16,8 +16,8 @@
     <string name="good_night">Goedenacht</string>
     <string name="ethernet">Ethernet</string>
     <string name="offline">Offline</string>
-    <string name="not_available">Niet beschikbaar op deze tv</string>
-    <string name="cant_open">Kan %1$s niet openen</string>
+    <string name="not_available">Niet beschikbaar op deze tv. Als er apps zijn uitgeschakeld, moet er misschien een weer aan.</string>
+    <string name="cant_open">Kan %1$s niet openen. Probeer het opnieuw; lukt het nog steeds niet, werk de app dan bij of installeer hem opnieuw.</string>
     <string name="date_format">EEEE d MMMM</string>
     <string name="stats_cpu">CPU %1$d%%</string>
     <string name="stats_memory">Geheugen %1$d / %2$d MB</string>

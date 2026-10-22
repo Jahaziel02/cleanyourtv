@@ -247,6 +247,8 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
     /** fill_dock false: how many dock slots held an app when reorder mode started. */
     private int dockedAtStart;
     private View btnReorder;
+    /** The key help shown for the whole of reorder and edit-dock mode. */
+    private TextView modeHint;
     /** dock_apps as loaded (config.xml or a theme): a saved Order only applies while these are unchanged. */
     private List<String> dockApps;
     /** fill_dock false: the dock can have empty slots, which reorder mode leaves out and restores afterwards. */
@@ -560,6 +562,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         });
         btnSettings.setOnClickListener(v -> open(systemIntent(Settings.ACTION_SETTINGS)));
         btnReorder = findViewById(R.id.btnReorder);
+        modeHint = findViewById(R.id.modeHint);
         btnReorder.setOnClickListener(v -> toggleReorder());
         btnReorder.setVisibility(cfg.reorderButton ? View.VISIBLE : View.GONE);
         if (!cfg.showNetworkPill) btnWifi.setVisibility(View.GONE);
@@ -1073,7 +1076,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         }
         if (!beginReorder()) return;
         focusTile(Math.max(0, Math.min(lastFocused, adapter.movableCount() - 1)));
-        Toast.makeText(this, R.string.reorder_hint, Toast.LENGTH_LONG).show();
+        showModeHint(R.string.reorder_hint);
     }
 
     /** The start shared by reorder and edit-dock mode. False when there is nothing to move. */
@@ -1099,7 +1102,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         dockEditing = true;
         dockEditSlot = -1;
         focusTile(0);
-        Toast.makeText(this, R.string.dock_edit_hint, Toast.LENGTH_LONG).show();
+        showModeHint(R.string.dock_edit_hint);
     }
 
     /**
@@ -1120,6 +1123,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
                     dockEditSlot = -1;
                     dimOthers();
                     focusTile(slot);
+                    showModeHint(R.string.dock_edit_hint);
                 } else {
                     endReorder();
                 }
@@ -1135,7 +1139,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
                         dockEditSlot = pos;
                         dimOthers();
                         focusTile(Math.min(COLUMNS, n - 1));
-                        Toast.makeText(this, R.string.dock_edit_pick_app, Toast.LENGTH_LONG).show();
+                        showModeHint(R.string.dock_edit_pick_app);
                     }
                 } else if (pos < n) {
                     swapIntoDock(dockEditSlot, pos);
@@ -1144,6 +1148,12 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             return true;   // never opens the app while editing
         }
         return super.dispatchKeyEvent(event);   // arrows navigate as usual
+    }
+
+    /** Shows the mode's key help until the mode ends; a toast would be gone before the first move. */
+    private void showModeHint(int text) {
+        modeHint.setText(text);
+        modeHint.setVisibility(View.VISIBLE);
     }
 
     /** Puts the app at pos into dock place slot, and the app that was there where the chosen one was; then saves. */
@@ -1197,6 +1207,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         dockEditSlot = -1;
         drop();
         reordering = false;
+        modeHint.setVisibility(View.GONE);
         adapter.setReordering(false);
         glass.setAccent(festive ? festival.accentColor() : 0);
         btnReorder.setActivated(false);
@@ -2413,7 +2424,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             }
             startService(i);
         } catch (Exception e) {
-            Toast.makeText(this, R.string.not_available, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.not_available, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -2422,7 +2433,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
         try {
             startActivity(i);
         } catch (ActivityNotFoundException | SecurityException e) {
-            Toast.makeText(this, R.string.not_available, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.not_available, Toast.LENGTH_LONG).show();
         }
     }
 
@@ -2472,7 +2483,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
             return;
         } catch (ActivityNotFoundException | SecurityException e) {
             if (inputAction.isEmpty()) {
-                Toast.makeText(this, R.string.not_available, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.not_available, Toast.LENGTH_LONG).show();
                 return;
             }
         }
@@ -2602,7 +2613,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
                         : "VOD".equals(s.name) ? R.drawable.ic_livetv : R.drawable.ic_av;
                 addInputRow(rows, popup, icon, s.label, -1, () -> {
                     if (!CoocaaSources.open(this, s)) {
-                        Toast.makeText(this, R.string.not_available, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.not_available, Toast.LENGTH_LONG).show();
                     }
                 });
             }

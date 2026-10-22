@@ -16,8 +16,8 @@
     <string name="good_night">Dobranoc</string>
     <string name="ethernet">Ethernet</string>
     <string name="offline">Brak sieci</string>
-    <string name="not_available">Niedostępne na tym telewizorze</string>
-    <string name="cant_open">Nie można otworzyć: %1$s</string>
+    <string name="not_available">Niedostępne na tym telewizorze. Jeśli wyłączono aplikacje, być może trzeba ponownie włączyć którąś z nich.</string>
+    <string name="cant_open">Nie można otworzyć: %1$s. Spróbuj ponownie; jeśli problem się powtarza, zaktualizuj lub zainstaluj ponownie aplikację.</string>
     <string name="date_format">EEEE  d MMMM</string>
     <string name="stats_cpu">CPU %1$d%%</string>
     <string name="stats_memory">Pamięć %1$d / %2$d MB</string>

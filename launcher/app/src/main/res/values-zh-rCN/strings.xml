@@ -30,8 +30,8 @@
     <string name="good_night">晚安</string>
     <string name="ethernet">有线网络</string>
     <string name="offline">未连接网络</string>
-    <string name="not_available">此电视不支持该功能</string>
-    <string name="cant_open">无法打开 %1$s</string>
+    <string name="not_available">此电视不支持该功能。如果停用过某些应用，可能需要重新启用其中一个。</string>
+    <string name="cant_open">无法打开 %1$s。请重试；如果仍然失败，请更新或重新安装该应用。</string>
     <string name="date_format">M月d日 EEEE</string>
     <string name="stats_cpu">CPU %1$d%%</string>
     <string name="stats_memory">内存 %1$d / %2$d MB</string>
