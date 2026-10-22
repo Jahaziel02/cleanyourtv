@@ -16,8 +16,8 @@
     <string name="good_night">শুভ রাত্রি</string>
     <string name="ethernet">ইথারনেট</string>
     <string name="offline">অফলাইন</string>
-    <string name="not_available">এই টিভিতে এভাইলেবল নেই</string>
-    <string name="cant_open">%1$s খোলা যাচ্ছে না</string>
+    <string name="not_available">এই টিভিতে এভাইলেবল নেই। কোনো অ্যাপ বন্ধ করা থাকলে, সেগুলোর একটি আবার চালু করতে হতে পারে।</string>
+    <string name="cant_open">%1$s খোলা যাচ্ছে না। আবার চেষ্টা করুন; বারবার এমন হলে অ্যাপটি আপডেট বা আবার ইনস্টল করুন।</string>
     <!-- "মঙ্গলবার, ২০ অক্টোবর"; Android writes the numbers in Bangla digits. -->
     <string name="date_format">EEEE, d MMMM</string>
     <string name="stats_cpu">সিপিইউ %1$d%%</string>

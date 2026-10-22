@@ -16,8 +16,8 @@
     <string name="good_night">Selamat Malam</string>
     <string name="ethernet">Ethernet</string>
     <string name="offline">Luring</string>
-    <string name="not_available">Tidak tersedia di TV ini</string>
-    <string name="cant_open">Tidak dapat membuka %1$s</string>
+    <string name="not_available">Tidak tersedia di TV ini. Jika ada aplikasi yang dinonaktifkan, mungkin salah satunya perlu diaktifkan kembali.</string>
+    <string name="cant_open">Tidak dapat membuka %1$s. Coba lagi; jika masih gagal, perbarui atau instal ulang aplikasinya.</string>
     <string name="stats_cpu">CPU %1$d%%</string>
     <string name="stats_memory">Memori %1$d / %2$d MB</string>
     <string name="stats_storage">Penyimpanan %1$s tersisa</string>

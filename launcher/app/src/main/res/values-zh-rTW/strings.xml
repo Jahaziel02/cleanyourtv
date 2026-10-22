@@ -16,8 +16,8 @@
     <string name="good_night">夜深了</string>
     <string name="ethernet">有線網路</string>
     <string name="offline">未連上網路</string>
-    <string name="not_available">這台電視不支援此功能</string>
-    <string name="cant_open">無法開啟 %1$s</string>
+    <string name="not_available">這台電視不支援此功能。如果停用過某些應用程式，可能需要重新啟用其中一個。</string>
+    <string name="cant_open">無法開啟 %1$s。請再試一次；如果仍然失敗，請更新或重新安裝該應用程式。</string>
     <string name="date_format">M月d日 EEEE</string>
     <string name="stats_cpu">CPU %1$d%%</string>
     <string name="stats_memory">記憶體 %1$d / %2$d MB</string>

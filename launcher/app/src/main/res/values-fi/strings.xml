@@ -16,8 +16,8 @@
     <string name="good_night">Hyvää yötä</string>
     <string name="ethernet">Ethernet</string>
     <string name="offline">Ei yhteyttä</string>
-    <string name="not_available">Ei käytettävissä tässä televisiossa</string>
-    <string name="cant_open">Ei voitu avata: %1$s</string>
+    <string name="not_available">Ei käytettävissä tässä televisiossa. Jos sovelluksia on poistettu käytöstä, jokin niistä on ehkä otettava uudelleen käyttöön.</string>
+    <string name="cant_open">Ei voitu avata: %1$s. Yritä uudelleen; jos ongelma jatkuu, päivitä tai asenna sovellus uudelleen.</string>
     <!-- Finnish: "tiistaina 20. lokakuuta"; the weekday comes out in the essive form. -->
     <string name="date_format">EEEE d. MMMM</string>
     <string name="dream_name">Kello</string>

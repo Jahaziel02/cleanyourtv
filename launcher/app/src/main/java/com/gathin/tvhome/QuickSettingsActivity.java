@@ -63,7 +63,7 @@ public final class QuickSettingsActivity extends Activity {
             try {
                 startActivity(target.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             } catch (ActivityNotFoundException | SecurityException e) {
-                Toast.makeText(this, R.string.not_available, Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.not_available, Toast.LENGTH_LONG).show();
             }
             finish();
         });

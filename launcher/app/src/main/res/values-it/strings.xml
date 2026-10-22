@@ -13,8 +13,8 @@
     <string name="good_evening">Buonasera</string>
     <string name="good_night">Buonanotte</string>
     <string name="offline">Offline</string>
-    <string name="not_available">Non disponibile su questa TV</string>
-    <string name="cant_open">Impossibile aprire %1$s</string>
+    <string name="not_available">Non disponibile su questa TV. Se sono state disattivate delle app, potrebbe essere necessario riattivarne una.</string>
+    <string name="cant_open">Impossibile aprire %1$s. Riprova; se continua a non funzionare, aggiornala o reinstallala.</string>
     <string name="stats_cpu">CPU %1$d%%</string>
     <string name="stats_memory">Memoria: %1$d / %2$d MB</string>
     <string name="stats_storage">Spazio: %1$s liberi</string>

@@ -16,8 +16,8 @@
     <string name="good_night">สวัสดียามค่ำคืน</string>
     <string name="ethernet">อีเทอร์เน็ต</string>
     <string name="offline">ออฟไลน์</string>
-    <string name="not_available">ทีวีเครื่องนี้ไม่รองรับ</string>
-    <string name="cant_open">เปิด %1$s ไม่ได้</string>
+    <string name="not_available">ทีวีเครื่องนี้ไม่รองรับ หากมีการปิดแอปบางแอปไว้ อาจต้องเปิดแอปใดแอปหนึ่งกลับมา</string>
+    <string name="cant_open">เปิด %1$s ไม่ได้ ลองอีกครั้ง หากยังไม่ได้ ให้อัปเดตหรือติดตั้งแอปใหม่</string>
     <string name="date_format">EEEE  d MMMM</string>
     <string name="stats_cpu">CPU %1$d%%</string>
     <string name="stats_memory">หน่วยความจำ %1$d / %2$d MB</string>

@@ -16,8 +16,8 @@
     <string name="good_night">Buenas noches</string>
     <string name="ethernet">Ethernet</string>
     <string name="offline">Sin conexión</string>
-    <string name="not_available">No disponible en este TV</string>
-    <string name="cant_open">No se puede abrir %1$s</string>
+    <string name="not_available">No disponible en este TV. Si se desactivaron apps, puede que haga falta reactivar alguna.</string>
+    <string name="cant_open">No se puede abrir %1$s. Vuelve a intentarlo; si sigue fallando, actualízala o reinstálala.</string>
     <string name="date_format">EEEE d \'de\' MMMM</string>
     <string name="date_format_home">EEEE\nd \'de\' MMMM</string>
     <string name="stats_cpu">CPU %1$d%%</string>

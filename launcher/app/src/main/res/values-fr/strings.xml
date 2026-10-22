@@ -16,8 +16,8 @@
     <string name="good_night">Bonne nuit</string>
     <string name="ethernet">Ethernet</string>
     <string name="offline">Hors ligne</string>
-    <string name="not_available">Indisponible sur cette TV</string>
-    <string name="cant_open">Impossible d\'ouvrir %1$s</string>
+    <string name="not_available">Indisponible sur cette TV. Si des applis ont été désactivées, il faut peut-être en réactiver une.</string>
+    <string name="cant_open">Impossible d\'ouvrir %1$s. Réessayez ; si le problème persiste, mettez l\'appli à jour ou réinstallez-la.</string>
     <string name="date_format">EEEE d MMMM</string>
     <string name="stats_cpu">CPU %1$d%%</string>
     <string name="stats_memory">Mémoire %1$d / %2$d Mo</string>

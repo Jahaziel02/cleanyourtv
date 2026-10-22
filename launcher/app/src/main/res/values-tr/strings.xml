@@ -16,8 +16,8 @@
     <string name="good_night">İyi Geceler</string>
     <string name="ethernet">Ethernet</string>
     <string name="offline">Çevrimdışı</string>
-    <string name="not_available">Bu TV’de kullanılamıyor</string>
-    <string name="cant_open">%1$s açılamıyor</string>
+    <string name="not_available">Bu TV’de kullanılamıyor. Bazı uygulamalar kapatıldıysa bunlardan birinin yeniden açılması gerekebilir.</string>
+    <string name="cant_open">%1$s açılamıyor. Tekrar deneyin; sorun sürerse uygulamayı güncelleyin veya yeniden yükleyin.</string>
     <string name="date_format">d MMMM EEEE</string>
     <string name="stats_cpu">CPU %1$d%%</string>
     <string name="stats_memory">Bellek %1$d / %2$d MB</string>

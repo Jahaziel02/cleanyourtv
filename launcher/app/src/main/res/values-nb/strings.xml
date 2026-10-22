@@ -16,8 +16,8 @@
     <string name="good_night">God natt</string>
     <string name="ethernet">Ethernet</string>
     <string name="offline">Frakoblet</string>
-    <string name="not_available">Ikke tilgjengelig på denne TV-en</string>
-    <string name="cant_open">Kan ikke åpne %1$s</string>
+    <string name="not_available">Ikke tilgjengelig på denne TV-en. Hvis apper er slått av, må kanskje en av dem slås på igjen.</string>
+    <string name="cant_open">Kan ikke åpne %1$s. Prøv igjen; hvis det fortsatt ikke virker, oppdater eller installer appen på nytt.</string>
     <string name="date_format">EEEE d. MMMM</string>
     <string name="stats_cpu">Prosessor %1$d%%</string>
     <string name="stats_memory">Minne: %1$d / %2$d MB</string>

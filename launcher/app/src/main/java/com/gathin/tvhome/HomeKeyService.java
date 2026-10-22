@@ -126,7 +126,7 @@ public class HomeKeyService extends AccessibilityService {
                 try {
                     startActivity(open.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                 } catch (ActivityNotFoundException | SecurityException unavailable) {
-                    Toast.makeText(this, R.string.not_available, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.not_available, Toast.LENGTH_LONG).show();
                 }
             }
             return true;

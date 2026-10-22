@@ -17,8 +17,8 @@
     <string name="good_night">Xin chào</string>
     <string name="ethernet">Ethernet</string>
     <string name="offline">Mất mạng</string>
-    <string name="not_available">TV này không hỗ trợ</string>
-    <string name="cant_open">Không mở được %1$s</string>
+    <string name="not_available">TV này không hỗ trợ. Nếu một số ứng dụng đã bị tắt, có thể cần bật lại một trong số đó.</string>
+    <string name="cant_open">Không mở được %1$s. Hãy thử lại; nếu vẫn lỗi, hãy cập nhật hoặc cài lại ứng dụng.</string>
     <!-- "Thứ Hai, 20 tháng 10" -->
     <string name="date_format">EEEE, d MMMM</string>
     <string name="dream_name">Đồng hồ</string>

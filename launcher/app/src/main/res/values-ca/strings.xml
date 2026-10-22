@@ -16,8 +16,8 @@
     <string name="good_night">Bona nit</string>
     <string name="ethernet">Ethernet</string>
     <string name="offline">Sense connexió</string>
-    <string name="not_available">No disponible en aquest televisor</string>
-    <string name="cant_open">No s\'ha pogut obrir %1$s</string>
+    <string name="not_available">No disponible en aquest televisor. Si s\'han desactivat aplicacions, potser cal tornar-ne a activar alguna.</string>
+    <string name="cant_open">No s\'ha pogut obrir %1$s. Torna-ho a provar; si continua fallant, actualitza-la o torna-la a instal·lar.</string>
     <string name="stats_cpu">CPU %1$d%%</string>
     <string name="stats_memory">Memòria %1$d / %2$d MB</string>
     <string name="stats_storage">Emmagatzematge %1$s lliure</string>
